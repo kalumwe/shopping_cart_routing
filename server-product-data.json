@@ -1,0 +1,47 @@
+[
+    {
+        "id": 1,
+        "title": "Pink Hoodie",
+        "description": "Lightweight, breathable hoodie with the Vue Crest. Guaranteed to keep you looking fresh while warm.",
+        "price": 19.99,
+        "imageUrl": "6.png",
+        "product_type": "hoodies/jackets",
+        "created_at": 2023    
+    },
+    {
+        "id": 2,
+        "title": "T-shirt",
+        "description": "The original Vue clothing item. Always prepared to keep your style in check.",
+        "price": 14.99,
+        "imageUrl": "2.png",
+        "product_type": "t-shirts/shirts",
+        "created_at": 2023 
+    },
+    {
+        "id": 3,
+        "title": "Hoodie",
+        "description": "Stay comfortable and cool with the first Vue Fitted Hoodie, featuring a normal bill and medium crown.",
+        "price": 14.99,
+        "imageUrl": "3.jpg",
+        "product_type": "hoodies/jackets",
+        "created_at": 2023 
+    },
+    {
+        "id": 4,
+        "title": "Jacket",
+        "description": "Keep warm and protected with the rugged, durable Vue lightweight jacket.",
+        "price": 44.99,
+        "imageUrl": "8.jpg",
+        "product_type": "hoodies/jackets",
+        "created_at": 2023 
+    },
+    {
+        "id": 5,
+        "title": "Protein",
+        "description": "Chocolate Protein Shake Powder mass gainer.",
+        "price": 144.99,
+        "imageUrl": "1.jpg",
+        "product_type": "food/nuitrition",
+        "created_at": 2023 
+    }
+]
