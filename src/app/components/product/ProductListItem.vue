@@ -1,6 +1,6 @@
     <template>   
        <div>
-        <img :src="getImageUrl(productItem.imageUrl)" alt="Product Image" class="product-image">
+        <img :src="require('../../assets/' + productItem.imageUrl)" class="product-image my-2 rounded"/>
             <h2 class="has-text-weight-bold">{{ productItem.title }}
               <span @click="addCartItem(productItem)"
                      class="tag is-primary is-pulled-right has-text-white">
@@ -37,7 +37,7 @@
            cursor: pointer;
         }
         .product-image {
-            width: 164px; 
+            width: 184px; 
             height: auto;
         }
     </style>

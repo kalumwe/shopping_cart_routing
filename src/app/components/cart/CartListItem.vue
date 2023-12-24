@@ -3,16 +3,18 @@
         <div class="cart-item__details">
           <p class="is-inline">{{ cartItem.title }}</p>
           <br>
-          <img :src="getImageUrl(cartItem.imageUrl)" alt="Product Image" class="product-image m-2">
+          <div class="cart-item__image">
+            <img :src="require('../../assets/' + cartItem.imageUrl)" class="product-image my-2 rounded"/>
+          </div>
           <div>
             <span class="cart-item--price has-text-primary has-text-weight-bold">
              {{ cartItem.price }}$ x {{ cartItem.quantity }}
             </span>
             <span>
              <i @click="addCartItem(cartItem)"
-              class="fa fa-arrow-circle-up cart-item__modify"></i>
+              class="fa fa-arrow-circle-up cart-item-modify"></i>
              <i @click="removeCartItem(cartItem)"
-              class="fa fa-arrow-circle-down cart-item__modify"></i>
+              class="fa fa-arrow-circle-down cart-item-modify"></i>
             </span>
           </div>
         </div>
@@ -40,12 +42,12 @@ import { mapActions } from 'vuex';
 
 
 <style scoped>
-.cart-item--modify {
+.cart-item-modify {
   cursor: pointer;
   margin: 0 1px;
 }
 .product-image {
-    width: 74px; 
+    width: 144px; 
     height: auto;
  }
 </style>

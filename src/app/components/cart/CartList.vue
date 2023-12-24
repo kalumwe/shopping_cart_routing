@@ -46,9 +46,6 @@ export default {
       'checkoutCart',
     ])
    },
-   created() {
-    this.$store.dispatch('getCartItems');
-   },
    components: {
     CartListItem
    }
@@ -59,7 +56,7 @@ export default {
 #cart {
   height: 100%;
   padding: 30px 10px;
-  margin-top: 100px;
+  margin-top: 244px;
   display: flex;
   flex-direction: column;
   justify-content: center;

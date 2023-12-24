@@ -39,7 +39,7 @@ export default {
 
 <style scoped>
 #products {
-  margin-top: 700px;
+  margin-top: 800px;
 }
 .products--header {
   border-bottom: 1px solid #E8E8E8;
