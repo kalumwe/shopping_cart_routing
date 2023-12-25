@@ -1,7 +1,14 @@
     <template>   
        <div>
-        <img :src="require('../../assets/' + productItem.imageUrl)" class="product-image my-2 rounded"/>
-            <h2 class="has-text-weight-bold">{{ productItem.title }}
+         <router-link
+            :to="'/products/' + productItem.id">       
+           <img :src="require('../../assets/' + productItem.imageUrl)" class="product-image my-2 rounded" />
+        </router-link>
+            <h2 class="has-text-weight-bold">
+                <router-link
+                  :to="'/products/' + productItem.id">
+                  {{ productItem.title }}
+                </router-link>
               <span @click="addCartItem(productItem)"
                      class="tag is-primary is-pulled-right has-text-white">
                Add to Cart
