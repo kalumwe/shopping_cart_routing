@@ -56,7 +56,7 @@ export default {
 #cart {
   height: 100%;
   padding: 30px 10px;
-  margin-top: 244px;
+  margin-top: 284px;
   display: flex;
   flex-direction: column;
   justify-content: center;
