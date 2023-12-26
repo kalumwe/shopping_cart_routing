@@ -57,7 +57,5 @@ import { mapActions } from 'vuex';
     width: 144px; 
     height: auto;
  }
- .box {
-  width: ;
- }
+
 </style>

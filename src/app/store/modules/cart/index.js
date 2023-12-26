@@ -17,12 +17,12 @@ const mutations = {
 
 const actions = {
    getCartItems ({ commit }) {
-      return axios.get('/api/cart').then((response) => {
+       axios.get('/api/cart').then((response) => {
          commit(types.UPDATE_CART_ITEMS, response.data)
       });
    },
    addCartItem ({ commit }, cartItem) {
-      axios.post('/api/cart', cartItem).then((response) => {
+      return axios.post('/api/cart', cartItem).then((response) => {
          commit(types.UPDATE_CART_ITEMS, response.data)
       });
    },

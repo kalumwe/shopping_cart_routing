@@ -25,9 +25,14 @@
       <img :src="require('../../assets/' + productItem.imageUrl)" class="rounded " />
     </div>
   </section>
+  <div v-else >
+    <NotFound  />
+  </div>
 </template>
 
 <script>
+import NotFound from '../NotFound.vue';
+
 export default {
   name: 'ProductItem',
   props: ['id'],
@@ -43,6 +48,9 @@ export default {
         this.$router.push('/cart');
       });
     }
+  },
+  components: {
+    NotFound
   }
 }
 </script>
