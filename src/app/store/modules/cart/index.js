@@ -9,15 +9,15 @@ const state = {
 const mutations = {
    [types.UPDATE_CART_ITEMS] (state, payload) {
       state.cartItems = payload;
-   },
+   }, 
    CHECKOUT_CART (state) {
       state.checkout = true;
    }
 };
 
 const actions = {
-   getCartItems ({ commit }) {
-       axios.get('/api/cart').then((response) => {
+   getCartItems ({ commit }, token) {
+       axios.get(`/api/cart?token=${token}`).then((response) => {
          commit(types.UPDATE_CART_ITEMS, response.data)
       });
    },

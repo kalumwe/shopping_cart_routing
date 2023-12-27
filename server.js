@@ -30,8 +30,6 @@ app.post('/login', (req, res) => {
     res.setHeader('Cache-Control', 'no-cache');
     res.json(TOKEN_DATA);
   });
-  fs
-  res.status(200).json({ API_TOKEN });
 });
 
 app.get('/products', (req, res) => {
