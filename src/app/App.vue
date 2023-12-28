@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <div class="navigation-buttons"> 
+    <div v-if="$route.path !== '/login'" class="navigation-buttons">
       <div class="is-pulled-right">
         <router-link to="/products" class="button">
           <i class="fa fa-user-circle mr-2"></i><span>Shop</span>
@@ -28,6 +28,7 @@ export default {
   name: 'App',
   computed: {
     ...mapGetters([
+      'token',
       'cartQuantity'
     ]),
   },
@@ -38,13 +39,23 @@ export default {
       }).catch((error) => {
         console.log(error);
       });
+    },
+    updateInitialState(token) {
+      this.$store.dispatch('getCartItems', token);
+      this.$store.dispatch('getProductItems', token);
     }
   },
   created() {
     const token = localStorage.getItem("token");
     if (token) {
-      this.$store.dispatch('getCartItems', token);
-      this.$store.dispatch('getProductItems', token);
+      this.updateInitialState(token);
+    }
+  },
+  watch: {
+    token() {
+      if (this.token) {
+        this.updateInitialState(this.token);
+      }
     }
   },
   components: {
